@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20F71" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Container" representedClassName="Container" syncable="YES">
+        <attribute name="count" optional="YES" attributeType="Integer 32" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="next" optional="YES" attributeType="String"/>
+        <attribute name="previous" optional="YES" attributeType="String"/>
+        <relationship name="results" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="ResultPage"/>
+    </entity>
+    <entity name="ResultPage" representedClassName="ResultPage" syncable="YES">
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <attribute name="url" optional="YES" attributeType="String"/>
+        <relationship name="sprites" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Sprite"/>
+    </entity>
+    <entity name="Sprite" representedClassName="Sprite" syncable="YES">
+        <attribute name="url" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="Container" positionX="-242.3192138671875" positionY="-90.52783203125" width="128" height="88"/>
+        <element name="ResultPage" positionX="159.593994140625" positionY="22.3076171875" width="128" height="88"/>
+        <element name="Sprite" positionX="128.0860595703125" positionY="177.6881713867188" width="128" height="58"/>
+    </elements>
+</model>
